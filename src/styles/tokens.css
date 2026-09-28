@@ -1,0 +1,20 @@
+:root {
+  --color-primary: #4A7C8C;
+  --color-primary-dark: #3C6673;
+  --color-accent: #F5EFE6;
+  --color-sage: #A8B5A0;
+  --color-text: #2F3E46;
+  --color-bg: #FDFCFA;
+
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --radius-lg: 0.875rem;
+  --shadow-soft: 0 4px 24px -6px rgba(47, 62, 70, 0.12);
+}
+
+[data-theme='dark'] {
+  --color-bg: #1A2329;
+  --color-text: #F2F7F9;
+  --color-accent: #243138;
+}

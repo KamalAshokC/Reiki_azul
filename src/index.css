@@ -1,59 +1,13 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap');
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-nav {
-  background-color: #2c3e50;
-  padding: 1rem;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-select {
-  padding: 0.5rem;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-}
-
-header {
-  background-color: #3498db;
-  color: white;
-  text-align: center;
-  padding: 2rem;
-}
-
-main {
-  flex: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-section {
-  margin-bottom: 3rem;
-}
-
-h1, h2 {
-  margin-bottom: 1rem;
-}
-
-ul {
-  list-style-position: inside;
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { background: var(--color-bg); }
+  ::selection { background: #C3DBE2; color: #2F3E46; }
+  summary::-webkit-details-marker { display: none; }
 }
