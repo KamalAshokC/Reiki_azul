@@ -44,7 +44,9 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         with:
           path: './dist' # Vite's default output directory
-
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
   # Deployment job
   deploy:
     environment:
