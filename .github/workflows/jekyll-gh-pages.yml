@@ -26,17 +26,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          source: ./
-          destination: ./_site
-      - name: Upload artifact
+          node-node-version: 20 # Matches modern Vite requirements
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Vite application
+        run: npm run build
+
+      - name: Upload production artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist' # Vite's default output directory
 
   # Deployment job
   deploy:
