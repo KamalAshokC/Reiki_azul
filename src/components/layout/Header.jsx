@@ -1,17 +1,19 @@
 import { useEffect, useState } from 'react';
 import Button from '../ui/Button';
 import { SITE } from '../../lib/constants';
+import { useTranslation } from 'react-i18next';
 
 const NAV = [
-  { href: '#about',    label: 'About My Practice' },
-  { href: '#reiki',    label: 'What is Reiki?' },
-  { href: '#packages', label: 'Reiki Packages' },
-  { href: '#stories',  label: 'Client Stories' },
+  { href: '#about',    labelKey: 'aboutMyPractice' },
+  { href: '#reiki',    labelKey: 'whatIsReiki' },
+  { href: '#packages', labelKey: 'reikiPackages' },
+  { href: '#stories',  labelKey: 'clientStories' },
 ];
 
 export default function Header({ locale, onLocaleChange }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -40,7 +42,7 @@ export default function Header({ locale, onLocaleChange }) {
               href={item.href}
               className="text-sm text-azul-700/80 transition-colors hover:text-azul-500"
             >
-              {item.label}
+              {t(item.labelKey)}
             </a>
           ))}
         </nav>
@@ -61,7 +63,7 @@ export default function Header({ locale, onLocaleChange }) {
             ))}
           </div>
           <Button as="a" href={SITE.bookingUrl} target="_blank" rel="noopener noreferrer">
-            Book Your Session
+            {t('bookYourSession')}
           </Button>
         </div>
 
@@ -87,7 +89,7 @@ export default function Header({ locale, onLocaleChange }) {
                 onClick={() => setOpen(false)}
                 className="border-b border-azul-50 py-3 text-azul-700"
               >
-                {item.label}
+                {t(item.labelKey)}
               </a>
             ))}
           </nav>
@@ -111,7 +113,7 @@ export default function Header({ locale, onLocaleChange }) {
             rel="noopener noreferrer"
             className="mt-5 w-full"
           >
-            Book Your Session
+            {t('bookYourSession')}
           </Button>
         </div>
       )}

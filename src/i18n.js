@@ -1,39 +1,22 @@
 import i18next from 'i18next'
 import { initReactI18next } from 'react-i18next'
+// Import translations
+import enTranslations from './locales/en.json';
+import esTranslations from './locales/es.json';
+import frTranslations from './locales/fr.json';
 
+// Update the i18n.js file with comprehensive translations
 const resources = {
   en: {
-    translation: {
-      welcome: "Welcome to Reiki Azul",
-      about: "About Us",
-      services: "Our Services",
-      contact: "Contact",
-      home: "Home",
-      menu: "Menu"
-    }
+    translation: enTranslations
   },
   fr: {
-    translation: {
-      welcome: "Bienvenue chez Reiki Azul",
-      about: "À Propos",
-      services: "Nos Services",
-      contact: "Contact",
-      home: "Accueil",
-      menu: "Menu"
-    }
-  },
+      translation: frTranslations
+    },
   es: {
-    translation: {
-      welcome: "Bienvenido a Reiki Azul",
-      about: "Sobre Nosotros",
-      services: "Nuestros Servicios",
-      contact: "Contacto",
-      home: "Inicio",
-      menu: "Menú"
-    }
+    translation: esTranslations
   }
 }
-
 i18next.use(initReactI18next).init({
   resources,
   lng: 'en', // Default language

@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { SITE } from '../../lib/constants';
+import { useTranslation } from 'react-i18next';
 
 export default function StickyBookCta() {
   const [show, setShow] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const onScroll = () => setShow(window.scrollY > 600);
@@ -20,7 +22,7 @@ export default function StickyBookCta() {
         rel="noopener noreferrer"
         className="block rounded-full bg-azul-500 py-3 text-center text-sm font-medium text-white shadow-lift"
       >
-        Book Your Session
+        {t('bookYourSession')}
       </a>
     </div>
   );

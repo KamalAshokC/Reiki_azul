@@ -9,6 +9,8 @@ import Testimonials from './components/sections/Testimonials';
 import Booking from './components/sections/Booking';
 import StickyBookCta from './components/booking/StickyBookCta';
 import { SITE, SERVICES } from './lib/constants';
+import { useTranslation } from 'react-i18next';
+import i18n from './i18n';
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
@@ -34,15 +36,20 @@ const localBusinessSchema = {
 
 export default function App() {
   const [locale, setLocale] = useState('en');
+  const { t } = useTranslation();
 
   useEffect(() => {
     const stored = localStorage.getItem('azul-locale');
-    if (stored) setLocale(stored);
+    if (stored) {
+      setLocale(stored);
+      i18n.changeLanguage(stored);
+    }
   }, []);
 
   useEffect(() => {
     localStorage.setItem('azul-locale', locale);
     document.documentElement.lang = locale;
+    i18n.changeLanguage(locale);
   }, [locale]);
 
   return (

@@ -1,6 +1,9 @@
 import { SITE } from '../../lib/constants';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="border-t border-azul-100 bg-white py-12">
       <div className="mx-auto grid max-w-content gap-8 px-5 sm:px-8 md:grid-cols-3">
@@ -9,16 +12,16 @@ export default function Footer() {
             Reiki <span className="text-azul-500">Azul</span>
           </p>
           <p className="mt-3 text-sm leading-relaxed text-azul-700/65">
-            Energy healing with Tania — Saint-Hubert, Montreal &amp; South Shore, and online.
+            {t('footerDescription')}
           </p>
         </div>
 
         <nav aria-label="Footer" className="text-sm">
           <ul className="space-y-2 text-azul-700/75">
-            <li><a className="hover:text-azul-500" href="#about">About My Practice</a></li>
-            <li><a className="hover:text-azul-500" href="#reiki">What is Reiki?</a></li>
-            <li><a className="hover:text-azul-500" href="#packages">Reiki Packages</a></li>
-            <li><a className="hover:text-azul-500" href="#stories">Client Stories</a></li>
+            <li><a className="hover:text-azul-500" href="#about">{t('aboutMyPractice')}</a></li>
+            <li><a className="hover:text-azul-500" href="#reiki">{t('whatIsReiki')}</a></li>
+            <li><a className="hover:text-azul-500" href="#packages">{t('reikiPackages')}</a></li>
+            <li><a className="hover:text-azul-500" href="#stories">{t('clientStories')}</a></li>
           </ul>
         </nav>
 
@@ -32,7 +35,7 @@ export default function Footer() {
       </div>
 
       <p className="mx-auto mt-10 max-w-content px-5 text-xs text-azul-700/45 sm:px-8">
-        © {new Date().getFullYear()} Reiki Azul. Reiki is a complementary practice and does not replace medical care.
+        © {new Date().getFullYear()} Reiki Azul. {t('copyrightNotice')}
       </p>
     </footer>
   );
