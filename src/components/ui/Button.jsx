@@ -5,7 +5,7 @@ export default function Button({ children, variant = 'primary', as: Tag = 'butto
     'focus-visible:ring-offset-2 disabled:opacity-50';
 
   const variants = {
-    primary: 'bg-azul-500 text-white hover:bg-azul-600 shadow-soft hover:shadow-lift',
+    primary: 'bg-azul-400 text-white hover:bg-azul-500 shadow-soft hover:shadow-lift',
     outline: 'border border-azul-500/40 text-azul-600 hover:bg-azul-50',
     ghost:   'text-azul-600 hover:text-azul-700 hover:bg-azul-50',
     sand:    'bg-sand text-azul-700 hover:bg-white',

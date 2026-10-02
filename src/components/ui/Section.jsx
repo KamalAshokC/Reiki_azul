@@ -8,12 +8,12 @@ export default function Section({ id, eyebrow, title, intro, children, tint = fa
         {(eyebrow || title) && (
           <header className="mx-auto mb-14 max-w-2xl text-center">
             {eyebrow && (
-              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-azul-500">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-azul-600">
                 {eyebrow}
               </p>
             )}
             {title && (
-              <h2 className="font-heading text-3xl leading-tight text-azul-700 sm:text-4xl md:text-5xl">
+              <h2 className="font-heading text-3xl leading-tight text-azul-400 sm:text-4xl md:text-5xl">
                 {title}
               </h2>
             )}

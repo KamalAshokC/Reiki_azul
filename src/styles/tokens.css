@@ -1,20 +1,35 @@
-:root {
-  --color-primary: #4A7C8C;
-  --color-primary-dark: #3C6673;
-  --color-accent: #F5EFE6;
-  --color-sage: #A8B5A0;
-  --color-text: #2F3E46;
-  --color-bg: #FDFCFA;
+root {
+  /* Primary Colors (azul scale) */
+  --color-primary-400: #5B9BAE;   /* Main accent — buttons, highlights, backgrounds */
+  --color-primary-500: #4A7C8C;   /* Secondary accent */
+  --color-primary-600: #3C6673;   /* Hover states */
 
-  --font-heading: "Cormorant Garamond", Georgia, serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  /* Text Colors */
+  --color-text-dark: #2F3E46;     /* Headings, body text (azul 700) */
+  --color-text-light: #9CC3CE;    /* Muted text (azul 300) */
 
-  --radius-lg: 0.875rem;
-  --shadow-soft: 0 4px 24px -6px rgba(47, 62, 70, 0.12);
-}
+  /* Accent Colors */
+  --color-accent-sand: #F5EFE6;   /* Warm cream background */
+  --color-accent-sage: #A8B5A0;   /* Earth tone accent */
+  --color-accent-clay: #C9A98C;   /* Warm neutral accent */
 
-[data-theme='dark'] {
-  --color-bg: #1A2329;
-  --color-text: #F2F7F9;
-  --color-accent: #243138;
+  /* Neutral Colors */
+  --color-white: #FFFFFF;
+  --color-black: #1A2329;         /* Near black (azul 900) */
+
+  /* Spacing & Layout */
+  --radius-lg: 0.875rem;          /* 14px rounded corners */
+  --radius-xl: 1.25rem;           /* 20px rounded corners */
+  --radius-2xl: 1.75rem;          /* 28px rounded corners */
+
+  /* Shadows */
+  --shadow-soft: 0 4px 24px -6px rgba(91, 155, 174, 0.12);   /* Primary color based */
+  --shadow-lift: 0 12px 40px -12px rgba(91, 155, 174, 0.22); /* Primary color based */
+
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Max Width */
+  --max-width-content: 72rem;
 }

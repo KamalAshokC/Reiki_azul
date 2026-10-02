@@ -1,5 +1,7 @@
 import Section from '../ui/Section';
 import { useTranslation } from 'react-i18next';
+import my_practice from '/src/assets/my_practice.jpg'
+
 
 const CREDENTIALS = [
   'Holy Fire® World Peace Reiki',
@@ -15,6 +17,9 @@ export default function About() {
       <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
         <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-gradient-to-br from-sand to-azul-100 shadow-soft">
           {/* Replace with Tania portrait: <img src="/images/about/tania.webp" alt="Tania, Reiki practitioner" ... /> */}
+           <img
+                  src={my_practice}
+                  alt="Reiki Azul hero image"             />
         </div>
 
         <div>

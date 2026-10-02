@@ -7,7 +7,7 @@ export const SITE = {
   email: 'rekimoonazul@gmail.com',
   address: '3955 Rue Lavoie, Saint-Hubert, Longueuil, QC',
   hours: '10:00 AM – 8:00 PM, 7 days a week',
-  bookingUrl: 'https://reikiazul.simplybook.me',
+  bookingUrl: 'https://book.squareup.com/appointments/3h5ench8k96yui/location/LGPSMPPZ2QZE3/services',
   deposit: 50,
   rapeAddOn: 25,
 };

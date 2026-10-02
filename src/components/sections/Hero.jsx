@@ -1,5 +1,6 @@
 import Button from '../ui/Button';
 import { useTranslation } from 'react-i18next';
+import pendulam from '/src/assets/balance_pendulam.png'
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -7,10 +8,11 @@ export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-azul-50">
       {/* Soft radial wash — replace with <img> hero photo when assets land */}
-      <div
+      <img
+        src={pendulam}
+        alt="Reiki Azul hero image"
         aria-hidden="true"
-        className="absolute -right-32 -top-32 h-[36rem] w-[36rem] rounded-full
-                   bg-gradient-to-br from-azul-200/60 via-sand to-transparent blur-3xl"
+        className="absolute bg-gradient-to-br from-azul-200/60 via-sand to-transparent "
       />
 
       <div className="relative mx-auto max-w-content px-5 py-24 sm:px-8 sm:py-32 lg:py-40">

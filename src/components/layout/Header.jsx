@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Button from '../ui/Button';
 import { SITE } from '../../lib/constants';
 import { useTranslation } from 'react-i18next';
+import logo from '/src/assets/reikiazul-logo.png'
 
 const NAV = [
   { href: '#about',    labelKey: 'aboutMyPractice' },
@@ -32,7 +33,7 @@ export default function Header({ locale, onLocaleChange }) {
     >
       <div className="mx-auto flex max-w-content items-center justify-between px-5 py-4 sm:px-8">
         <a href="#top" className="font-heading text-xl tracking-wide text-azul-700">
-          Reiki <span className="text-azul-500">Azul</span>
+          <img src={logo} alt="Reiki Azul logo with the business name Reiki Azul" className="h-8 w-auto" />
         </a>
 
         <nav aria-label="Main" className="hidden items-center gap-8 lg:flex">
